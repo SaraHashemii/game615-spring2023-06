@@ -7,7 +7,8 @@ public class VampireController : MonoBehaviour
 
     // A gameObject in scene displaying the target point of the agent
     public GameObject targetPoint;
-    public GameObject minimapIcon; 
+    public GameObject minimapIcon;
+    public LayerMask layerMask;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class VampireController : MonoBehaviour
             // ...find the point that was clicked and...
             RaycastHit hit;
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            var hasHit = Physics.Raycast(ray, out hit, 100);
+            var hasHit = Physics.Raycast(ray, out hit, 100, layerMask);
 
             //  ... if something has been hit ...
             if(hasHit)

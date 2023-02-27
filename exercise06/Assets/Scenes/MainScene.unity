@@ -109,7 +109,7 @@ NavMeshSettings:
     agentRadius: 0.3
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.6
+    agentClimb: 0.2
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -485,6 +485,10 @@ PrefabInstance:
       value: rocksTall (11)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -525,8 +529,7 @@ GameObject:
   - component: {fileID: 68323913}
   - component: {fileID: 68323912}
   - component: {fileID: 68323914}
-  - component: {fileID: 68323915}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +549,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &68323912
 MeshRenderer:
@@ -612,19 +615,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &68323915
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68323910}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.7362418, y: 4.0000005, z: 5.2399993}
-  m_Center: {x: -0.13187957, y: -4.2277332e-14, z: 1.9900014}
 --- !u!1 &80461599
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,8 +725,7 @@ GameObject:
   - component: {fileID: 98313796}
   - component: {fileID: 98313795}
   - component: {fileID: 98313797}
-  - component: {fileID: 98313798}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +745,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 27
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &98313795
 MeshRenderer:
@@ -822,19 +811,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &98313798
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98313793}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1 &98330843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1007,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!1 &111184924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111184925}
+  m_Layer: 0
+  m_Name: Destination2
+  m_TagString: Destination
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &111184925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111184924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.97, y: 0, z: 15.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 811857064}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &122039125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,8 +1065,8 @@ RectTransform:
   m_GameObject: {fileID: 122039125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1897030603}
   m_Father: {fileID: 1712688009}
@@ -1067,8 +1074,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -44, y: 44}
-  m_SizeDelta: {x: 165, y: 165}
+  m_AnchoredPosition: {x: -82, y: 82}
+  m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122039127
 MonoBehaviour:
@@ -1275,6 +1282,10 @@ PrefabInstance:
       value: ironFenceBorder (20)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -1388,7 +1399,7 @@ Transform:
   m_Children:
   - {fileID: 1178175604}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 38.553, y: 68.966, z: 0}
 --- !u!114 &142192381
 MonoBehaviour:
@@ -1437,7 +1448,7 @@ GameObject:
   - component: {fileID: 144000589}
   - component: {fileID: 144000592}
   - component: {fileID: 144000591}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1710,6 +1721,10 @@ PrefabInstance:
       value: ironFenceBorder (14)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -1881,6 +1896,10 @@ PrefabInstance:
       value: rocksTall (6)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -1918,7 +1937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212160120}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1986,8 +2005,7 @@ GameObject:
   - component: {fileID: 216568534}
   - component: {fileID: 216568533}
   - component: {fileID: 216568535}
-  - component: {fileID: 216568536}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2007,7 +2025,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &216568533
 MeshRenderer:
@@ -2073,19 +2091,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &216568536
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216568531}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1 &239741279
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,7 +2103,7 @@ GameObject:
   - component: {fileID: 239741282}
   - component: {fileID: 239741281}
   - component: {fileID: 239741283}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,8 +2122,8 @@ Transform:
   m_LocalScale: {x: 0.79776496, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1181558325}
-  m_RootOrder: 2
+  m_Father: {fileID: 1997341141}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &239741281
 MeshRenderer:
@@ -2466,8 +2471,7 @@ GameObject:
   - component: {fileID: 283488697}
   - component: {fileID: 283488696}
   - component: {fileID: 283488698}
-  - component: {fileID: 283488699}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2487,7 +2491,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 21
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &283488696
 MeshRenderer:
@@ -2553,19 +2557,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &283488699
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283488694}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1001 &295305706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2638,6 +2629,10 @@ PrefabInstance:
       value: ironFenceBorder (33)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -2679,8 +2674,7 @@ GameObject:
   - component: {fileID: 311765246}
   - component: {fileID: 311765245}
   - component: {fileID: 311765247}
-  - component: {fileID: 311765248}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2700,7 +2694,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 19
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &311765245
 MeshRenderer:
@@ -2766,19 +2760,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &311765248
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311765243}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1 &314614259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,7 +2770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314614260}
   - component: {fileID: 314614261}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2941,6 +2922,10 @@ PrefabInstance:
       value: rocks (13)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -3020,8 +3005,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 2066287616}
-  m_Follow: {fileID: 2066287616}
+  m_LookAt: {fileID: 2113179469}
+  m_Follow: {fileID: 2113179469}
   m_Lens:
     FieldOfView: 46
     OrthographicSize: 32
@@ -3052,8 +3037,7 @@ GameObject:
   - component: {fileID: 348397766}
   - component: {fileID: 348397765}
   - component: {fileID: 348397767}
-  - component: {fileID: 348397768}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3073,7 +3057,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 16
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &348397765
 MeshRenderer:
@@ -3139,19 +3123,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &348397768
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348397763}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.8090205, y: 4.0000005, z: 5.2399993}
-  m_Center: {x: -0.09549022, y: -4.2277366e-14, z: 1.9900024}
 --- !u!1 &357090223
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,8 +3135,7 @@ GameObject:
   - component: {fileID: 357090226}
   - component: {fileID: 357090225}
   - component: {fileID: 357090227}
-  - component: {fileID: 357090228}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3185,7 +3155,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 22
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &357090225
 MeshRenderer:
@@ -3251,19 +3221,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &357090228
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357090223}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1 &364139230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3434,6 +3391,10 @@ PrefabInstance:
       value: ironFenceBorder (27)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -3570,6 +3531,10 @@ PrefabInstance:
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_Name
       value: Rock (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3722,6 +3687,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_Name
       value: rocksTall (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3961,7 +3930,7 @@ GameObject:
   - component: {fileID: 441175621}
   - component: {fileID: 441175624}
   - component: {fileID: 441175623}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4226,6 +4195,10 @@ PrefabInstance:
       value: rocksTall (25)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -4322,6 +4295,10 @@ PrefabInstance:
       value: rocksTall (5)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -4416,6 +4393,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_Name
       value: rocksTall (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4518,6 +4499,10 @@ PrefabInstance:
       value: ironFenceBorder (11)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -4547,6 +4532,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5838242118759675180, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+--- !u!1 &481771030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1057542120394511930, guid: 2d23bb31c1539b24cbee7e4c21d67c43, type: 3}
+  m_PrefabInstance: {fileID: 130928581158604916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &499179896
 GameObject:
   m_ObjectHideFlags: 0
@@ -4559,8 +4549,7 @@ GameObject:
   - component: {fileID: 499179899}
   - component: {fileID: 499179898}
   - component: {fileID: 499179900}
-  - component: {fileID: 499179901}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4580,7 +4569,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 12
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &499179898
 MeshRenderer:
@@ -4646,19 +4635,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &499179901
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499179896}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1 &503955920
 GameObject:
   m_ObjectHideFlags: 0
@@ -4823,6 +4799,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_Name
       value: rocksTall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5023,6 +5003,10 @@ PrefabInstance:
       value: ironFenceBorder (32)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -5220,6 +5204,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_Name
       value: ironFenceBorder
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5459,7 +5447,7 @@ GameObject:
   - component: {fileID: 566165199}
   - component: {fileID: 566165198}
   - component: {fileID: 566165200}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5478,8 +5466,8 @@ Transform:
   m_LocalScale: {x: 0.79776496, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1181558325}
-  m_RootOrder: 3
+  m_Father: {fileID: 1997341141}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &566165198
 MeshRenderer:
@@ -5617,6 +5605,10 @@ PrefabInstance:
       value: ironFenceBorder (17)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -5659,7 +5651,7 @@ GameObject:
   - component: {fileID: 579014705}
   - component: {fileID: 579014708}
   - component: {fileID: 579014707}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5830,6 +5822,10 @@ PrefabInstance:
       value: rocksTall (26)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -5928,6 +5924,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_Name
       value: ironFenceBorder (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6031,6 +6031,10 @@ PrefabInstance:
       value: ironFenceBorder (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -6072,8 +6076,7 @@ GameObject:
   - component: {fileID: 622989824}
   - component: {fileID: 622989823}
   - component: {fileID: 622989825}
-  - component: {fileID: 622989826}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6093,7 +6096,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &622989823
 MeshRenderer:
@@ -6159,19 +6162,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &622989826
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622989821}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1001 &624339590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6238,6 +6228,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_Name
       value: rocks
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6434,6 +6428,10 @@ PrefabInstance:
       value: rocksTall (8)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -6462,6 +6460,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.93418306, y: 0.58999205, z: 0.8148119}
   m_Center: {x: 0.00000047683716, y: 0.29499698, z: 0}
+--- !u!1 &654943081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 654943082}
+  m_Layer: 0
+  m_Name: Destination3
+  m_TagString: Destination
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &654943082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654943081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.98, y: 0, z: 6.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 811857064}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &670386129
 GameObject:
   m_ObjectHideFlags: 0
@@ -6474,8 +6503,7 @@ GameObject:
   - component: {fileID: 670386132}
   - component: {fileID: 670386131}
   - component: {fileID: 670386133}
-  - component: {fileID: 670386134}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6495,7 +6523,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 20
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &670386131
 MeshRenderer:
@@ -6561,19 +6589,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &670386134
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670386129}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1 &677356144
 GameObject:
   m_ObjectHideFlags: 0
@@ -6586,8 +6601,7 @@ GameObject:
   - component: {fileID: 677356147}
   - component: {fileID: 677356146}
   - component: {fileID: 677356148}
-  - component: {fileID: 677356149}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6607,7 +6621,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &677356146
 MeshRenderer:
@@ -6673,19 +6687,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &677356149
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677356144}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1001 &678775345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6754,6 +6755,10 @@ PrefabInstance:
       value: rocksTall (21)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -6792,6 +6797,10 @@ PrefabInstance:
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_Name
       value: Rock (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6946,6 +6955,10 @@ PrefabInstance:
       value: rocks (11)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -6984,7 +6997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703949089}
   - component: {fileID: 703949090}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7136,6 +7149,10 @@ PrefabInstance:
       value: rocksTall (20)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -7176,8 +7193,7 @@ GameObject:
   - component: {fileID: 710733928}
   - component: {fileID: 710733927}
   - component: {fileID: 710733929}
-  - component: {fileID: 710733930}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7197,7 +7213,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &710733927
 MeshRenderer:
@@ -7263,19 +7279,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &710733930
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710733925}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1001 &720996863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7346,6 +7349,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_Name
       value: ironFenceBorder (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7445,6 +7452,10 @@ PrefabInstance:
       value: rocksTall (12)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -7541,6 +7552,10 @@ PrefabInstance:
       value: rocksTall (10)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -7582,7 +7597,7 @@ GameObject:
   - component: {fileID: 743180163}
   - component: {fileID: 743180166}
   - component: {fileID: 743180165}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7697,8 +7712,7 @@ GameObject:
   - component: {fileID: 777001710}
   - component: {fileID: 777001709}
   - component: {fileID: 777001711}
-  - component: {fileID: 777001712}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7718,7 +7732,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &777001709
 MeshRenderer:
@@ -7784,19 +7798,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &777001712
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777001707}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.9206526, y: 4.0000005, z: 5.2399993}
-  m_Center: {x: 0.039673395, y: -4.9382773e-14, z: 1.9900018}
 --- !u!1 &808160535
 GameObject:
   m_ObjectHideFlags: 0
@@ -7895,6 +7896,40 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!1 &811857063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 811857064}
+  m_Layer: 0
+  m_Name: Destinations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &811857064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811857063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1595150083}
+  - {fileID: 111184925}
+  - {fileID: 654943082}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811982496
 GameObject:
   m_ObjectHideFlags: 0
@@ -8065,6 +8100,10 @@ PrefabInstance:
       value: ironFenceBorder (12)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -8106,8 +8145,7 @@ GameObject:
   - component: {fileID: 824922562}
   - component: {fileID: 824922561}
   - component: {fileID: 824922563}
-  - component: {fileID: 824922564}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8127,7 +8165,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 17
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &824922561
 MeshRenderer:
@@ -8193,19 +8231,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &824922564
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824922559}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1001 &826772765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8216,6 +8241,10 @@ PrefabInstance:
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_Name
       value: Rock (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8314,8 +8343,7 @@ GameObject:
   - component: {fileID: 835481444}
   - component: {fileID: 835481443}
   - component: {fileID: 835481445}
-  - component: {fileID: 835481446}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8335,7 +8363,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 25
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &835481443
 MeshRenderer:
@@ -8401,19 +8429,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &835481446
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835481441}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1 &841824841
 GameObject:
   m_ObjectHideFlags: 0
@@ -8427,7 +8442,7 @@ GameObject:
   - component: {fileID: 841824843}
   - component: {fileID: 841824846}
   - component: {fileID: 841824845}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8736,7 +8751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861259329}
   - component: {fileID: 861259330}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8832,8 +8847,7 @@ GameObject:
   - component: {fileID: 863187850}
   - component: {fileID: 863187849}
   - component: {fileID: 863187851}
-  - component: {fileID: 863187852}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8853,7 +8867,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 24
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &863187849
 MeshRenderer:
@@ -8919,19 +8933,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &863187852
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863187847}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1 &864885924
 GameObject:
   m_ObjectHideFlags: 0
@@ -9030,6 +9031,7 @@ Transform:
   - {fileID: 1719279211}
   - {fileID: 212160120}
   - {fileID: 1821356130}
+  - {fileID: 1351039694}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9043,7 +9045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 873451048}
   - component: {fileID: 873451049}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9193,6 +9195,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_Name
       value: rocksTall (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9389,6 +9395,10 @@ PrefabInstance:
       value: rocksTall (7)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -9483,7 +9493,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903700413
 GameObject:
@@ -9749,6 +9759,10 @@ PrefabInstance:
       value: rocks (4)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -9845,6 +9859,10 @@ PrefabInstance:
       value: rocks (10)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -9883,6 +9901,10 @@ PrefabInstance:
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_Name
       value: Rock (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10039,6 +10061,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_Name
       value: ironFenceBorder (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10240,6 +10266,10 @@ PrefabInstance:
       value: ironFenceBorder (22)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -10430,6 +10460,10 @@ PrefabInstance:
       value: rocksTall (13)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -10530,6 +10564,10 @@ PrefabInstance:
       value: ironFenceBorder (8)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -10625,6 +10663,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_Name
       value: rocks (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10727,6 +10769,10 @@ PrefabInstance:
       value: ironFenceBorder (29)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -10822,6 +10868,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_Name
       value: rocksTall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11150,7 +11200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1051560661}
   - component: {fileID: 1051560662}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11712,8 +11762,7 @@ GameObject:
   - component: {fileID: 1101330758}
   - component: {fileID: 1101330757}
   - component: {fileID: 1101330759}
-  - component: {fileID: 1101330760}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11733,7 +11782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 14
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1101330757
 MeshRenderer:
@@ -11799,19 +11848,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1101330760
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101330755}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.893413, y: 4.0000005, z: 5.2399993}
-  m_Center: {x: 0.05329319, y: -0.0000019073489, z: 1.9900005}
 --- !u!1 &1127197316
 GameObject:
   m_ObjectHideFlags: 0
@@ -12174,6 +12210,10 @@ PrefabInstance:
       value: rocksTall (15)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -12410,6 +12450,10 @@ PrefabInstance:
       value: Rock (8)
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -12538,7 +12582,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 19.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -12569,41 +12613,6 @@ Transform:
   m_Father: {fileID: 142192380}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1181558324
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1181558325}
-  m_Layer: 4
-  m_Name: No collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1181558325
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181558324}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1280307106}
-  - {fileID: 2035790992}
-  - {fileID: 239741280}
-  - {fileID: 566165197}
-  m_Father: {fileID: 1997341141}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181713762
 GameObject:
   m_ObjectHideFlags: 0
@@ -12812,8 +12821,7 @@ GameObject:
   - component: {fileID: 1195564114}
   - component: {fileID: 1195564113}
   - component: {fileID: 1195564115}
-  - component: {fileID: 1195564116}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12833,7 +12841,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1195564113
 MeshRenderer:
@@ -12899,19 +12907,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1195564116
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195564111}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.7994103, y: 4.0000005, z: 5.2399993}
-  m_Center: {x: -0.100295305, y: -0.0000019073489, z: 1.9900013}
 --- !u!1 &1197337000
 GameObject:
   m_ObjectHideFlags: 0
@@ -13082,6 +13077,10 @@ PrefabInstance:
       value: ironFenceBorder (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -13181,6 +13180,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_Name
       value: ironFenceBorder (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13452,6 +13455,10 @@ PrefabInstance:
       value: rocks (12)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -13590,7 +13597,7 @@ GameObject:
   - component: {fileID: 1280307108}
   - component: {fileID: 1280307107}
   - component: {fileID: 1280307109}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13609,8 +13616,8 @@ Transform:
   m_LocalScale: {x: 0.83111, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1181558325}
-  m_RootOrder: 0
+  m_Father: {fileID: 1997341141}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1280307107
 MeshRenderer:
@@ -13784,7 +13791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299693427}
   - component: {fileID: 1299693428}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14038,6 +14045,10 @@ PrefabInstance:
       value: ironFenceBorder (15)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -14077,7 +14088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1313943133}
   - component: {fileID: 1313943134}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14282,8 +14293,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351039693}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.02183, y: 82.91043, z: 37.95742}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.06183, y: 85.51043, z: 49.00742}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14295,8 +14306,8 @@ Transform:
   - {fileID: 1031239138}
   - {fileID: 242110686}
   - {fileID: 382437767}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 864885925}
+  m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1360824631
 PrefabInstance:
@@ -14403,8 +14414,7 @@ GameObject:
   - component: {fileID: 1396136254}
   - component: {fileID: 1396136253}
   - component: {fileID: 1396136255}
-  - component: {fileID: 1396136256}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14424,7 +14434,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1396136253
 MeshRenderer:
@@ -14490,19 +14500,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1396136256
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396136251}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.6611505, y: 4.0000005, z: 5.2399993}
-  m_Center: {x: -0.16942525, y: -0.0000019073489, z: 1.9900028}
 --- !u!1001 &1409859898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14569,6 +14566,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_Name
       value: rocks (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14667,6 +14668,10 @@ PrefabInstance:
       value: rocksTall (22)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -14763,6 +14768,10 @@ PrefabInstance:
       value: rocksTall (14)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -14803,8 +14812,7 @@ GameObject:
   - component: {fileID: 1428261751}
   - component: {fileID: 1428261750}
   - component: {fileID: 1428261752}
-  - component: {fileID: 1428261753}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14824,7 +14832,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 18
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1428261750
 MeshRenderer:
@@ -14890,19 +14898,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1428261753
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428261748}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1001 &1428386962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14969,6 +14964,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_Name
       value: rocks (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15081,7 +15080,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1436921496
 PrefabInstance:
@@ -15149,6 +15148,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_Name
       value: rocksTall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15247,6 +15250,10 @@ PrefabInstance:
       value: rocks (3)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -15285,6 +15292,10 @@ PrefabInstance:
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_Name
       value: Rock (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15481,8 +15492,7 @@ GameObject:
   - component: {fileID: 1461734609}
   - component: {fileID: 1461734608}
   - component: {fileID: 1461734610}
-  - component: {fileID: 1461734611}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15502,7 +15512,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 11
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1461734608
 MeshRenderer:
@@ -15568,19 +15578,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1461734611
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461734606}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1001 &1500680651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15647,6 +15644,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_Name
       value: rocksTall
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15745,6 +15746,10 @@ PrefabInstance:
       value: rocksTall (23)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -15785,8 +15790,7 @@ GameObject:
   - component: {fileID: 1509841323}
   - component: {fileID: 1509841322}
   - component: {fileID: 1509841324}
-  - component: {fileID: 1509841325}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15806,7 +15810,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1509841322
 MeshRenderer:
@@ -15872,19 +15876,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1509841325
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509841320}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1 &1512286735
 GameObject:
   m_ObjectHideFlags: 0
@@ -15897,8 +15888,7 @@ GameObject:
   - component: {fileID: 1512286738}
   - component: {fileID: 1512286737}
   - component: {fileID: 1512286739}
-  - component: {fileID: 1512286740}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15918,7 +15908,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 28
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1512286737
 MeshRenderer:
@@ -15984,19 +15974,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1512286740
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512286735}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1 &1527644867
 GameObject:
   m_ObjectHideFlags: 0
@@ -16165,6 +16142,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_Name
       value: ironFenceBorder (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16364,6 +16345,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_Name
       value: ironFenceBorder (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16603,6 +16588,10 @@ PrefabInstance:
       value: Rock (7)
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -16759,6 +16748,10 @@ PrefabInstance:
       value: ironFenceBorder (19)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -16870,8 +16863,39 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1595150082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595150083}
+  m_Layer: 0
+  m_Name: Destination1
+  m_TagString: Destination
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1595150083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595150082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.08, y: 0, z: 5.99}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 811857064}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1603036798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16938,6 +16962,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_Name
       value: rocks (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17040,6 +17068,10 @@ PrefabInstance:
       value: ironFenceBorder (16)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -17079,6 +17111,10 @@ PrefabInstance:
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_Name
       value: Rock (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17328,6 +17364,10 @@ PrefabInstance:
       value: rocks (6)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -17426,6 +17466,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_Name
       value: ironFenceBorder (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17529,6 +17573,10 @@ PrefabInstance:
       value: ironFenceBorder (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -17624,6 +17672,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_Name
       value: rocksTall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17762,7 +17814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1705632802}
   - component: {fileID: 1705632803}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17940,7 +17992,7 @@ RectTransform:
   m_Children:
   - {fileID: 122039126}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -18015,6 +18067,10 @@ PrefabInstance:
       value: rocks (1)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -18052,7 +18108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1719279211}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18291,7 +18347,7 @@ GameObject:
   - component: {fileID: 1730809102}
   - component: {fileID: 1730809105}
   - component: {fileID: 1730809104}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18564,6 +18620,10 @@ PrefabInstance:
       value: ironFenceBorder (9)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -18659,6 +18719,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_Name
       value: rocks (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4203c947fe8cb134abba5b7ca5a8c038, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18953,6 +19017,10 @@ PrefabInstance:
       value: ironFenceBorder (24)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -18991,7 +19059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1821356130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19246,7 +19314,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1839588381
 GameObject:
@@ -19358,8 +19426,7 @@ GameObject:
   - component: {fileID: 1852560110}
   - component: {fileID: 1852560109}
   - component: {fileID: 1852560111}
-  - component: {fileID: 1852560112}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19379,7 +19446,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1852560109
 MeshRenderer:
@@ -19445,19 +19512,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1852560112
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852560107}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1 &1861920446
 GameObject:
   m_ObjectHideFlags: 0
@@ -19788,7 +19842,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 160}
+  m_SizeDelta: {x: 157, y: 157}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897030604
 MonoBehaviour:
@@ -19838,7 +19892,7 @@ GameObject:
   - component: {fileID: 1903553444}
   - component: {fileID: 1903553447}
   - component: {fileID: 1903553446}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19951,6 +20005,10 @@ PrefabInstance:
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_Name
       value: Rock (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20103,6 +20161,10 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_Name
       value: rocksTall (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20303,6 +20365,10 @@ PrefabInstance:
       value: ironFenceBorder (25)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -20344,8 +20410,7 @@ GameObject:
   - component: {fileID: 1941754638}
   - component: {fileID: 1941754637}
   - component: {fileID: 1941754639}
-  - component: {fileID: 1941754640}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20365,7 +20430,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1941754637
 MeshRenderer:
@@ -20431,19 +20496,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1941754640
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941754635}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1001 &1948676815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20516,6 +20568,10 @@ PrefabInstance:
       value: ironFenceBorder (18)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -20557,8 +20613,7 @@ GameObject:
   - component: {fileID: 1959988111}
   - component: {fileID: 1959988110}
   - component: {fileID: 1959988112}
-  - component: {fileID: 1959988113}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20578,7 +20633,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1959988110
 MeshRenderer:
@@ -20644,19 +20699,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &1959988113
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959988108}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!1001 &1981136833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20667,6 +20709,10 @@ PrefabInstance:
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_Name
       value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20825,6 +20871,10 @@ PrefabInstance:
       value: ironFenceBorder (13)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -20863,7 +20913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1997341141}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20882,8 +20932,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1181558325}
   - {fileID: 710733926}
+  - {fileID: 1280307106}
+  - {fileID: 2035790992}
+  - {fileID: 239741280}
+  - {fileID: 566165197}
   - {fileID: 1852560108}
   - {fileID: 1509841321}
   - {fileID: 677356145}
@@ -21176,6 +21229,10 @@ PrefabInstance:
       value: ironFenceBorder (23)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -21371,6 +21428,10 @@ PrefabInstance:
       value: rocksTall (18)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -21467,6 +21528,10 @@ PrefabInstance:
       value: rocksTall (3)
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c5d29166d619267468fe3fa93ed0b17d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -21507,7 +21572,7 @@ GameObject:
   - component: {fileID: 2035790994}
   - component: {fileID: 2035790993}
   - component: {fileID: 2035790995}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21526,8 +21591,8 @@ Transform:
   m_LocalScale: {x: 0.83111, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1181558325}
-  m_RootOrder: 1
+  m_Father: {fileID: 1997341141}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2035790993
 MeshRenderer:
@@ -21665,6 +21730,10 @@ PrefabInstance:
       value: ironFenceBorder (30)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -21706,8 +21775,7 @@ GameObject:
   - component: {fileID: 2056633941}
   - component: {fileID: 2056633940}
   - component: {fileID: 2056633942}
-  - component: {fileID: 2056633943}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21727,7 +21795,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 23
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2056633940
 MeshRenderer:
@@ -21793,19 +21861,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &2056633943
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056633938}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.000001908428, z: 1.99}
 --- !u!4 &2066287616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1118556788134179014, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
@@ -21847,6 +21902,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPoint: {fileID: 2076526788}
   minimapIcon: {fileID: 1839115134}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1001 &2067182127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21919,6 +21977,10 @@ PrefabInstance:
       value: ironFenceBorder (31)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -21953,6 +22015,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1057542120394511933, guid: 2d23bb31c1539b24cbee7e4c21d67c43, type: 3}
   m_PrefabInstance: {fileID: 130928581158604916}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2072604599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481771030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c176d17b524edc143a217df7f87a59f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smellSense: 6
+--- !u!195 &2072604600
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481771030}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 1.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 7
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &2075242262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22025,6 +22122,10 @@ PrefabInstance:
       value: ironFenceBorder (7)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -22063,7 +22164,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2a906c0e82527414ea3c36740cbbfc8d, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a906c0e82527414ea3c36740cbbfc8d, type: 3}
       propertyPath: m_LocalScale.x
@@ -22242,6 +22343,10 @@ PrefabInstance:
       value: Rock (5)
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -22338,8 +22443,7 @@ GameObject:
   - component: {fileID: 2088584687}
   - component: {fileID: 2088584686}
   - component: {fileID: 2088584688}
-  - component: {fileID: 2088584689}
-  m_Layer: 4
+  m_Layer: 2
   m_Name: WaterTile. (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22359,7 +22463,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1997341141}
-  m_RootOrder: 26
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2088584686
 MeshRenderer:
@@ -22425,19 +22529,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!65 &2088584689
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &2113179469 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1796437767189365915, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+  m_PrefabInstance: {fileID: 1118556786408815814}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088584684}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 4.0000005, z: 5.24}
-  m_Center: {x: -0.00000023841858, y: -0.0000000010792752, z: 1.99}
 --- !u!1 &2125958013
 GameObject:
   m_ObjectHideFlags: 0
@@ -22549,7 +22645,7 @@ GameObject:
   - component: {fileID: 2130721640}
   - component: {fileID: 2130721644}
   - component: {fileID: 2130721643}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22661,7 +22757,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22728,6 +22824,10 @@ PrefabInstance:
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_Name
       value: Rock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 162500, guid: 568b15b1fe7027049b35d9c4fbe502ba, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22827,11 +22927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1057542120394511933, guid: 2d23bb31c1539b24cbee7e4c21d67c43, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1057542120394511933, guid: 2d23bb31c1539b24cbee7e4c21d67c43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: 19.14
       objectReference: {fileID: 0}
     - target: {fileID: 1057542120394511933, guid: 2d23bb31c1539b24cbee7e4c21d67c43, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22868,6 +22968,10 @@ PrefabInstance:
     - target: {fileID: 1057542120394511933, guid: 2d23bb31c1539b24cbee7e4c21d67c43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014004880159412660, guid: 2d23bb31c1539b24cbee7e4c21d67c43, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d23bb31c1539b24cbee7e4c21d67c43, type: 3}
@@ -22956,11 +23060,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1118556788134179012, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1118556788134179014, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1118556788134179014, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23006,5 +23110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3365705669783975560, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1118556788134179015, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
