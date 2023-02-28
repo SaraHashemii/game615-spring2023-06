@@ -3,23 +3,35 @@ using UnityEngine.AI;
 
 public class VampireController : MonoBehaviour
 {
+    public Brain brains1;
+    public Brain brains2;
+    public Brain brains3;
+    public Brain brains4;
+
+
     private NavMeshAgent _agent;
     public GameObject targetPoint;
     public GameObject minimapIcon;
     public GameObject brainPrefab;
     public LayerMask layerMask;
+   
     public bool _eatBrain;
-    ScoreManager SM; 
+    ScoreManager SM;
+    public GameObject particleEffect;
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
-        SM = GameObject.Find("Canvas").GetComponent<ScoreManager>(); 
-    }
+        SM = GameObject.Find("Canvas").GetComponent<ScoreManager>();
+
+
+
+      }
 
     void Update()
     {
         // When the left mouse button is hit...
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             // ...find the point that was clicked and...
             RaycastHit hit;
@@ -27,7 +39,7 @@ public class VampireController : MonoBehaviour
             var hasHit = Physics.Raycast(ray, out hit, 100, layerMask);
 
             //  ... if something has been hit ...
-            if(hasHit)
+            if (hasHit)
             {
                 // ... set the destination for this agent
                 _agent.destination = hit.point;
@@ -43,9 +55,16 @@ public class VampireController : MonoBehaviour
     {
         if (other.gameObject.tag == "Collectable")
         {
-            Instantiate(brainPrefab, transform.position, Quaternion.identity); 
+            
             SM.AddPointToPlayer();
-            Destroy(other.gameObject, 0.25f); 
+            particleEffect.SetActive(true);
+            Instantiate(particleEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            particleEffect.SetActive(false);
+
+           // brains1.StartCoroutine(SpawnOneBrain());
+            //call the spawner
+            
+           
         }
     }
 }

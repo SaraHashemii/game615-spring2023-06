@@ -40,27 +40,28 @@ public class ZombieController : MonoBehaviour
 
     private void Update()
     {
-        var distanceToBrain = Vector3.Distance(transform.position, _brainInScene.transform.position);
+        //Generates Errors --> enemy doesnt collect the brain however when the player try to collect it, the error says  The object of type 'GameObject' has been destroyed but you are still trying to access it.
+        //var distanceToBrain = Vector3.Distance(transform.position, _brainInScene.transform.position);
 
         //var distanceToPlayer = Vector3.Distance(transform.position, _player.transform.position);
 
         // If the brain is within range ...
-        if (distanceToBrain < smellSense)
-        {
-            // ... move toward the brain, updating the destination each frame
-            _agent.destination = _brainInScene.transform.position;
-            _isSeeking = true;
-        }
-        else
-        {
-            _isSeeking = false;
+        //if (distanceToBrain < smellSense)
+        //{
+        //    // ... move toward the brain, updating the destination each frame
+        //    _agent.destination = _brainInScene.transform.position;
+        //    _isSeeking = true;
+        //}
+        //else
+        //{
+        //    _isSeeking = false;
 
-            var distanceToDestination = Vector3.Distance(transform.position, _destination.transform.position);
-            if (distanceToDestination < .5f)
-            {
-                SetNextDestination();
-            }
-        }
+        //    var distanceToDestination = Vector3.Distance(transform.position, _destination.transform.position);
+        //    if (distanceToDestination < .5f)
+        //    {
+        //        SetNextDestination();
+        //    }
+        //}
 
         ownMinimap.transform.position = new Vector3(transform.position.x, minimapIcon.transform.position.y, transform.position.z);
     }

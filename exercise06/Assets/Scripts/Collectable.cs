@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
+    //public bool isDestroyed;
+    //public GameObject particleEffect;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -11,7 +13,10 @@ public class Collectable : MonoBehaviour
         {
             //UI changes
             //create particle
-            Destroy(this.gameObject, 0.2f); 
+           // Instantiate(particleEffect, this.gameObject.transform.position, this.gameObject.transform.rotation);
+
+            Destroy(this.gameObject);
+            //isDestroyed = true;
         }
 
         if(other.gameObject.tag == "Enemy")
@@ -19,6 +24,7 @@ public class Collectable : MonoBehaviour
             //UI changes
             //create particle
             Destroy(this.gameObject, 0.2f);
+            //isDestroyed = true;
         }
     }
 }
