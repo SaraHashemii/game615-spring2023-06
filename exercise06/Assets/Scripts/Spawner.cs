@@ -4,33 +4,42 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    // The item that will be cloned and placed in-game
     public GameObject prefab;
-
-    // Minimum time that should pass before spawning again
-    public float minSpawnTime = 1f;
-
-    // Maximum time that should pass before spawning again
-    public float maxSpawnTime = 5f;
+    GameObject zombie;
+    ZombieController ZC;
+    bool stopInstantiate; 
 
     void Start()
     {
-        // At the start of the game, spawn immediately
-        Spawn();
+        zombie = Instantiate(prefab, transform.position, Quaternion.identity);
+        ZC = zombie.GetComponent<ZombieController>();
+        stopInstantiate = false;
     }
 
-    // This function will spawn an element and, after a random time,
-    // will call itself again, in an infinite loop
-    private void Spawn()
+    public IEnumerator Instantiate()
     {
-        // Generates the clone
-        Instantiate(prefab, transform.position, transform.rotation);
+        stopInstantiate = true; 
+        yield return new WaitForSeconds(5);
+        zombie = Instantiate(prefab, transform.position, transform.rotation);
+        ZC = zombie.GetComponent<ZombieController>(); 
+    }
 
-        // Randomize the next spawn time
-        var spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
+    private void Update()
+    {
+        if (ZC._asleep && !stopInstantiate)
+        {
+            StartCoroutine(Instantiate());          
+        }
+        if (!ZC._asleep)
+        {
+            stopInstantiate = false;
+        }
+    }
 
-        // Calls itself to spawn another gameObject
-        Invoke("Spawn", spawnTime);
+    public void LargeSpawn()
+    {
+        var spawnTime = 5;
+        Invoke("Instantiate", spawnTime);
     }
 
 }

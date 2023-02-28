@@ -4,15 +4,16 @@ using UnityEngine.AI;
 public class VampireController : MonoBehaviour
 {
     private NavMeshAgent _agent;
-
-    // A gameObject in scene displaying the target point of the agent
     public GameObject targetPoint;
     public GameObject minimapIcon;
+    public GameObject brainPrefab;
     public LayerMask layerMask;
-
+    public bool _eatBrain;
+    ScoreManager SM; 
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        SM = GameObject.Find("Canvas").GetComponent<ScoreManager>(); 
     }
 
     void Update()
@@ -36,5 +37,15 @@ public class VampireController : MonoBehaviour
 
         //make the icon move along the player, but not rotate like a child gameobject of the player
         minimapIcon.transform.position = new Vector3(transform.position.x, minimapIcon.transform.position.y, transform.position.z);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Collectable")
+        {
+            Instantiate(brainPrefab, transform.position, Quaternion.identity); 
+            SM.AddPointToPlayer();
+            Destroy(other.gameObject, 0.25f); 
+        }
     }
 }
