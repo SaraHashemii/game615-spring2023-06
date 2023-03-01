@@ -28,8 +28,6 @@ public class UIController : MonoBehaviour
         if (timerStarted)
         {
             currentTime -= Time.deltaTime;
-
-
             if (currentTime <= 0)
             {
                 timerStarted = false;

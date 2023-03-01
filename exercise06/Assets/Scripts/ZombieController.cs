@@ -14,8 +14,7 @@ public class ZombieController : MonoBehaviour
     public LayerMask brainLM; 
     public GameObject zombie;
     public GameObject grave;
-    public bool inRange;
-    public float smellSense = 6;
+    public float smellSense = 5;
     public GameObject minimapIcon;
     public ParticleSystem onCollectParticle;
     public ParticleSystem onAsleepParticle;
@@ -46,29 +45,25 @@ public class ZombieController : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
-        if (inRange) 
+    {      
+        //triggerArea.SetActive(false);
+        Collider[] brainHit = Physics.OverlapSphere(transform.position, smellSense, brainLM);
+        if (brainHit != null)
         { 
-            //triggerArea.SetActive(false);
-        }
-
-        Collider[] brainHit = Physics.OverlapSphere(transform.position, 6, brainLM);
-        if(brainHit != null && inRange)
-        {
-            _isSeeking = true; 
+            _isSeeking = true;
             foreach (Collider brain in brainHit)
             {
                 _agent.destination = brain.transform.position;
-                var distanceToBrain = Vector3.Distance(transform.position, brain.transform.position);
+                /*var distanceToBrain = Vector3.Distance(transform.position, brain.transform.position);
                 if (distanceToBrain < .25f)
                 {
-                    inRange = false; 
-                }
+                    inRange = false;
+                }*/
             }
         }
         else
         {
-            _isSeeking = false; 
+            _isSeeking = false;
         }
 
         if (!_isSeeking)
@@ -82,13 +77,17 @@ public class ZombieController : MonoBehaviour
 
         if (_asleep)
         {
-            StartCoroutine("WakeUp");
+            StartCoroutine(WakeUp());
+        }
+        else
+        {
+            StopCoroutine(WakeUp());
         }
     }
 
     private void OnDrawGizmosSelected()
     {
-        if(inRange)
+        if(_isSeeking)
         {
             //Handles.color = new Color(1f, 0f, 0f, 0.1f);
             Gizmos.color = new Color(1f, 0f, 0f, 0.1f);
@@ -155,16 +154,17 @@ public class ZombieController : MonoBehaviour
         MIM.changeIcon = true; 
         grave.SetActive(true);
         zombie.SetActive(false);
+        onAsleepParticle.gameObject.SetActive(true);
         onAsleepParticle.Play();
         canvas.SetActive(true);
         yield return new WaitForSeconds(20);
         onAsleepParticle.Stop();
+        onAsleepParticle.gameObject.SetActive(false);
         canvas.SetActive(false);
         grave.SetActive(false);
         zombie.SetActive(true);
         MIM.changeIcon = false;
         _agent.speed = 2;
-        triggerArea.SetActive(true);
         _asleep = false;
         SetNextDestination();
     }

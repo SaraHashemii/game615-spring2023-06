@@ -8,18 +8,16 @@ public class WakeUpCount : MonoBehaviour
     public TextMeshProUGUI timer;
     public float timeCount;
 
-    void Start()
+    void OnEnable()
     {
-        timeCount = 21; 
+        timeCount = 26; 
     }
 
     void Update()
     {
-        if(timeCount != 0)
-        {
-            DisplayTime(timeCount);
-        }
-        else
+        DisplayTime(timeCount);
+
+        if (timeCount == 0)
         {
             timeCount = 0; 
         }
@@ -27,8 +25,8 @@ public class WakeUpCount : MonoBehaviour
 
     void DisplayTime(float timeToDisplay)
     {
-        timeToDisplay -= 1;
-        float seconds = Mathf.FloorToInt(timeCount % 60);
+        timeToDisplay -= Time.time;
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timer.text = string.Format("{00}", seconds);
     }
 }

@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class TriggerAreaCheck : MonoBehaviour
 {
-    private ZombieController ZC;
-    
-    private void Awake()
-    {
-        ZC = GetComponentInParent<ZombieController>();
-    }
+    public ZombieController ZC; 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Collectable"))
         {
             ZC._agent.destination = other.transform.position;
-            ZC.inRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Collectable"))
+        {
+            ZC.SetNextDestination(); 
         }
     }
 }
