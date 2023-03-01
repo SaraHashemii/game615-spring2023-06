@@ -4,110 +4,157 @@ using UnityEditor;
 using System.Collections;
 public class ZombieController : MonoBehaviour
 {
-    private NavMeshAgent _agent;
-    GameObject _brainInScene;
-    public GameObject brainPrefab; 
+    public NavMeshAgent _agent;
+    public GameObject brain1Prefab, brain2Prefab, brain3Prefab, brain4Prefab;
     private GameObject _destination;
-    public float smellSense = 6;
-    public ParticleSystem onCollectParticle;
     private GameObject[] _destinations;
-    [SerializeField] private bool _isSeeking;
-    public GameObject minimapIcon;
-    GameObject ownMinimap; 
-    GameObject zombie;
-    GameObject grave; 
     ScoreManager SM;
-    public bool _asleep; 
+    public GameObject canvas;
+    public LayerMask brainLM; 
+    public GameObject zombie;
+    public GameObject grave;
+    public bool inRange;
+    public float smellSense = 6;
+    public GameObject minimapIcon;
+    public ParticleSystem onCollectParticle;
+    public ParticleSystem onAsleepParticle;
+    public bool _asleep;
+    public GameObject triggerArea;
 
-    void SetNextDestination()
+    BrainSpawnManager brainSpawner1, brainSpawner2, brainSpawner3, brainSpawner4;
+
+    public void SetNextDestination()
     {
         int index = Random.Range(0, _destinations.Length);
         _destination = _destinations[index];
-        _agent.destination = _destination.transform.position;
+        float randomX = _destination.transform.position.x + Random.Range(0, 2);
+        float randomZ = _destination.transform.position.z + Random.Range(0, 2);
+        Vector3 closeDest = new Vector3(randomX, _destination.transform.position.y, randomZ); 
+        _agent.destination = closeDest;           
     }
 
     private void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
-        _brainInScene = GameObject.FindGameObjectWithTag("Collectable");
         _destinations = GameObject.FindGameObjectsWithTag("Destination");
+        brainSpawner1 = GameObject.Find("area1").GetComponent<BrainSpawnManager>();
+        brainSpawner2 = GameObject.Find("area2").GetComponent<BrainSpawnManager>();
+        brainSpawner3 = GameObject.Find("area3").GetComponent<BrainSpawnManager>();
+        brainSpawner4 = GameObject.Find("area4").GetComponent<BrainSpawnManager>();
         SM = GameObject.Find("Canvas").GetComponent<ScoreManager>();
-        ownMinimap = Instantiate(minimapIcon, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.Euler(90, 0, 0)); 
-        zombie = transform.GetChild(1).gameObject;
-        grave = transform.GetChild(0).gameObject;
-        SetNextDestination();
+        SetNextDestination(); 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        //Generates Errors --> enemy doesnt collect the brain however when the player try to collect it, the error says  The object of type 'GameObject' has been destroyed but you are still trying to access it.
-        //var distanceToBrain = Vector3.Distance(transform.position, _brainInScene.transform.position);
+        /*if (inRange) 
+        { 
+        triggerArea.SetActive(false);
+        }*/
 
-        //var distanceToPlayer = Vector3.Distance(transform.position, _player.transform.position);
+        Collider[] brainHit = Physics.OverlapSphere(transform.position, 6, brainLM);
+        if(brainHit != null)
+        { 
+            foreach (Collider brain in brainHit)
+            {
+                _agent.destination = brain.transform.position;
+                //var distanceToBrain = Vector3.Distance(transform.position, brain.transform.position);
+            }
+        }
+        else
+        {
+            var distanceToDestination = Vector3.Distance(transform.position, _destination.transform.position);
+            if (distanceToDestination < .75f)
+            {
+                SetNextDestination();
+            }
+        }    
 
-        // If the brain is within range ...
-        //if (distanceToBrain < smellSense)
-        //{
-        //    // ... move toward the brain, updating the destination each frame
-        //    _agent.destination = _brainInScene.transform.position;
-        //    _isSeeking = true;
-        //}
-        //else
-        //{
-        //    _isSeeking = false;
-
-        //    var distanceToDestination = Vector3.Distance(transform.position, _destination.transform.position);
-        //    if (distanceToDestination < .5f)
-        //    {
-        //        SetNextDestination();
-        //    }
-        //}
-
-        ownMinimap.transform.position = new Vector3(transform.position.x, minimapIcon.transform.position.y, transform.position.z);
+        if (_asleep)
+        {
+            StartCoroutine("WakeUp");
+        }
     }
 
     private void OnDrawGizmosSelected()
     {
-        // Depending on the status, change the handles color
-        if(_isSeeking)
+        if(inRange)
         {
-            Handles.color = new Color(1f, 0f, 0f, 0.1f);
+            //Handles.color = new Color(1f, 0f, 0f, 0.1f);
             Gizmos.color = new Color(1f, 0f, 0f, 0.1f);
         }
         else
         {
-            Handles.color = new Color(0f, 1f, 0f, 0.1f);
+            //Handles.color = new Color(0f, 1f, 0f, 0.1f);
             Gizmos.color = new Color(0f, 1f, 0f, 0.1f);
         }
         // Draw a disc displaying the smell sense range for the zombie
-        Handles.DrawSolidDisc(transform.position,Vector3.up, smellSense);
-        
+        //Handles.DrawSolidDisc(transform.position,Vector3.up, smellSense);        
         Gizmos.DrawSphere(transform.position, smellSense);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Collectable")
-        {
-            Instantiate(brainPrefab, transform.position, Quaternion.identity);
+        if (other.gameObject.name == "BrainArea1(Clone)")
+        {         
             SM.AddPointToEnemy();
-            //Instantiate(onCollectParticle, transform.position, Quaternion.identity);
-            Destroy(other.gameObject, 0.25f); 
-            zombie.SetActive(false);
+            onCollectParticle.Play();
+            Destroy(other.gameObject);
             _asleep = true;
-            grave.SetActive(true);
-            _agent.speed = 0;
+            brainSpawner1.StartCoroutine("SpawnOneBrain");
+        }
 
-            StartCoroutine(Respawn());
+        if (other.gameObject.name == "BrainArea2(Clone)")
+        {
+            SM.AddPointToEnemy();
+            onCollectParticle.Play();
+            Destroy(other.gameObject);
+            _asleep = true;
+            brainSpawner2.StartCoroutine("SpawnOneBrain");
+        }
+
+        if (other.gameObject.name == "BrainArea3(Clone)")
+        {
+            SM.AddPointToEnemy();
+            onCollectParticle.Play();
+            Destroy(other.gameObject);
+            _asleep = true;
+            brainSpawner3.StartCoroutine("SpawnOneBrain");
+        }
+
+        if (other.gameObject.name == "BrainArea4(Clone)")
+        {
+            SM.AddPointToEnemy();
+            onCollectParticle.Play();
+            Destroy(other.gameObject);
+            _asleep = true;
+            brainSpawner4.StartCoroutine("SpawnOneBrain");
+        }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Physics.IgnoreCollision(other.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
         }
     }
 
-    IEnumerator Respawn()
+    IEnumerator WakeUp()
     {
-        yield return new WaitForSeconds(30);
-        _asleep = false; 
+        _agent.speed = 0;
+        yield return new WaitForSeconds(2.5f);
+        MinimapIconMovement MIM = GetComponentInParent<MinimapIconMovement>();
+        MIM.changeIcon = true; 
+        grave.SetActive(true);
+        zombie.SetActive(false);
+        onAsleepParticle.Play();
+        canvas.SetActive(true);
+        yield return new WaitForSeconds(20);
+        onAsleepParticle.Stop();
+        canvas.SetActive(false);
         grave.SetActive(false);
         zombie.SetActive(true);
+        MIM.changeIcon = false;
         _agent.speed = 2;
+        triggerArea.SetActive(true);
+        _asleep = false;
+        SetNextDestination();
     }
 }

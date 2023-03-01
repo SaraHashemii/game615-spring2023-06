@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 369659}
   - component: {fileID: 369658}
   - component: {fileID: 369660}
+  - component: {fileID: 369661}
   m_Layer: 0
   m_Name: GrassTile (22)
   m_TagString: Ground
@@ -221,6 +222,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &369661
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369656}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &19591591
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +250,7 @@ GameObject:
   - component: {fileID: 19591594}
   - component: {fileID: 19591593}
   - component: {fileID: 19591595}
+  - component: {fileID: 19591596}
   m_Layer: 0
   m_Name: GrassTile (33)
   m_TagString: Ground
@@ -319,6 +337,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &19591596
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19591591}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &55670413
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +365,7 @@ GameObject:
   - component: {fileID: 55670416}
   - component: {fileID: 55670415}
   - component: {fileID: 55670417}
+  - component: {fileID: 55670418}
   m_Layer: 0
   m_Name: GrassTile (20)
   m_TagString: Ground
@@ -417,6 +452,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &55670418
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55670413}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &58678173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,9 +479,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieSpawn (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1848469903899170901, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -438,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.63
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -684,6 +739,7 @@ GameObject:
   - component: {fileID: 80461602}
   - component: {fileID: 80461601}
   - component: {fileID: 80461603}
+  - component: {fileID: 80461604}
   m_Layer: 0
   m_Name: Tile_Road (1)
   m_TagString: Ground
@@ -699,7 +755,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80461599}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5000001, w: 0.49999994}
-  m_LocalPosition: {x: -5.43, y: 0.47000122, z: 11.29}
+  m_LocalPosition: {x: -5.43, y: 0.25, z: 11.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -767,9 +823,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300028, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &80461604
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80461599}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &98313793
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +952,7 @@ GameObject:
   - component: {fileID: 98330846}
   - component: {fileID: 98330845}
   - component: {fileID: 98330847}
+  - component: {fileID: 98330848}
   m_Layer: 0
   m_Name: Tile_Road (2)
   m_TagString: Ground
@@ -895,7 +968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98330843}
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 2.51, y: 0.47000122, z: -12.71}
+  m_LocalPosition: {x: 2.51, y: 0.25, z: -12.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -963,9 +1036,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300028, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &98330848
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98330843}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &103186042
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +1067,7 @@ GameObject:
   - component: {fileID: 103186045}
   - component: {fileID: 103186044}
   - component: {fileID: 103186046}
+  - component: {fileID: 103186047}
   m_Layer: 0
   m_Name: GrassTile (23)
   m_TagString: Ground
@@ -1064,6 +1154,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &103186047
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103186042}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &111184924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1213,7 @@ GameObject:
   - component: {fileID: 112974938}
   - component: {fileID: 112974937}
   m_Layer: 5
-  m_Name: Timer
+  m_Name: Timer UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1316,6 +1422,7 @@ GameObject:
   - component: {fileID: 126121493}
   - component: {fileID: 126121492}
   - component: {fileID: 126121494}
+  - component: {fileID: 126121495}
   m_Layer: 0
   m_Name: GrassTile (36)
   m_TagString: Ground
@@ -1402,6 +1509,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &126121495
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126121490}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &131813136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1584,8 +1707,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142192377}
-  m_LocalRotation: {x: 0.55978835, y: -0.000000013736465, z: 0.000000009279733, w: 0.8286357}
-  m_LocalPosition: {x: 0, y: 19.44, z: -9}
+  m_LocalRotation: {x: 0.4837017, y: 0.00000002129748, z: -0.000000011770155, w: 0.87523293}
+  m_LocalPosition: {x: 0, y: 14.440001, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1756,6 +1879,7 @@ GameObject:
   - component: {fileID: 158043723}
   - component: {fileID: 158043722}
   - component: {fileID: 158043721}
+  - component: {fileID: 158043724}
   m_Layer: 0
   m_Name: GrassTile (44)
   m_TagString: Ground
@@ -1842,6 +1966,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158043719}
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &158043724
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158043719}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &168440047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2468,6 +2608,7 @@ GameObject:
   - component: {fileID: 242469721}
   - component: {fileID: 242469720}
   - component: {fileID: 242469722}
+  - component: {fileID: 242469723}
   m_Layer: 0
   m_Name: GrassTile (10)
   m_TagString: Ground
@@ -2554,6 +2695,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &242469723
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242469718}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &269923033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,6 +2754,7 @@ GameObject:
   - component: {fileID: 277231628}
   - component: {fileID: 277231627}
   - component: {fileID: 277231629}
+  - component: {fileID: 277231630}
   m_Layer: 0
   m_Name: Tile_Road (6)
   m_TagString: Ground
@@ -2612,7 +2770,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277231625}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5000001, w: 0.49999994}
-  m_LocalPosition: {x: 18.41, y: 0.47000122, z: 11.29}
+  m_LocalPosition: {x: 18.41, y: 0.25, z: 11.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2680,9 +2838,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300028, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &277231630
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277231625}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &283488694
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,6 +3560,7 @@ GameObject:
   - component: {fileID: 364139233}
   - component: {fileID: 364139232}
   - component: {fileID: 364139234}
+  - component: {fileID: 364139235}
   m_Layer: 0
   m_Name: Tile_Corner (1)
   m_TagString: Ground
@@ -3401,7 +3576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364139230}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5000001, w: 0.49999994}
-  m_LocalPosition: {x: -5.4300003, y: 0.47000122, z: 19.29}
+  m_LocalPosition: {x: -5.4300003, y: 0.25, z: 19.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3469,9 +3644,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300016, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &364139235
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364139230}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &366033978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3577,11 +3768,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5838242118759675180, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
---- !u!1 &367735004 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1118556788134180665, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
-  m_PrefabInstance: {fileID: 1118556786408815814}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &382437766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4115,6 +4301,7 @@ GameObject:
   - component: {fileID: 433922155}
   - component: {fileID: 433922154}
   - component: {fileID: 433922156}
+  - component: {fileID: 433922157}
   m_Layer: 0
   m_Name: GrassTile (1)
   m_TagString: Ground
@@ -4201,6 +4388,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &433922157
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433922152}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &439331348
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,6 +4416,7 @@ GameObject:
   - component: {fileID: 439331351}
   - component: {fileID: 439331350}
   - component: {fileID: 439331352}
+  - component: {fileID: 439331353}
   m_Layer: 0
   m_Name: Bridge
   m_TagString: Ground
@@ -4299,6 +4503,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300022, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &439331353
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439331348}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &441175619
 GameObject:
   m_ObjectHideFlags: 0
@@ -5025,6 +5245,7 @@ GameObject:
   - component: {fileID: 503955923}
   - component: {fileID: 503955922}
   - component: {fileID: 503955924}
+  - component: {fileID: 503955925}
   m_Layer: 0
   m_Name: Tile_Road (3)
   m_TagString: Ground
@@ -5040,7 +5261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503955920}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5000001, w: 0.49999994}
-  m_LocalPosition: {x: -5.4700027, y: 0.47000122, z: -4.72}
+  m_LocalPosition: {x: -5.4700027, y: 0.25, z: -4.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5108,9 +5329,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300028, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &503955925
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503955920}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &510014937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5223,6 +5460,7 @@ GameObject:
   - component: {fileID: 527201197}
   - component: {fileID: 527201196}
   - component: {fileID: 527201198}
+  - component: {fileID: 527201199}
   m_Layer: 0
   m_Name: GrassTile (2)
   m_TagString: Ground
@@ -5309,6 +5547,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &527201199
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527201194}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &535820035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5426,6 +5680,7 @@ GameObject:
   - component: {fileID: 540918712}
   - component: {fileID: 540918711}
   - component: {fileID: 540918713}
+  - component: {fileID: 540918714}
   m_Layer: 0
   m_Name: Tile_Road (5)
   m_TagString: Ground
@@ -5441,7 +5696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540918709}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5000001, w: 0.49999994}
-  m_LocalPosition: {x: 18.410004, y: 0.47000122, z: -4.77}
+  m_LocalPosition: {x: 18.410004, y: 0.25, z: -4.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5509,9 +5764,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300028, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &540918714
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540918709}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &543471229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5629,6 +5900,7 @@ GameObject:
   - component: {fileID: 547402788}
   - component: {fileID: 547402787}
   - component: {fileID: 547402789}
+  - component: {fileID: 547402790}
   m_Layer: 0
   m_Name: GrassTile (18)
   m_TagString: Ground
@@ -5715,6 +5987,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &547402790
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547402785}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &556829039
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,6 +6015,7 @@ GameObject:
   - component: {fileID: 556829042}
   - component: {fileID: 556829041}
   - component: {fileID: 556829043}
+  - component: {fileID: 556829044}
   m_Layer: 0
   m_Name: GrassTile (13)
   m_TagString: Ground
@@ -5813,6 +6102,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &556829044
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556829039}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &557326516
 GameObject:
   m_ObjectHideFlags: 0
@@ -6684,6 +6989,7 @@ GameObject:
   - component: {fileID: 628448166}
   - component: {fileID: 628448165}
   - component: {fileID: 628448167}
+  - component: {fileID: 628448168}
   m_Layer: 0
   m_Name: GrassTile (18)
   m_TagString: Ground
@@ -6770,6 +7076,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &628448168
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628448163}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &637939176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6881,7 +7203,7 @@ GameObject:
   - component: {fileID: 647148233}
   - component: {fileID: 647148234}
   m_Layer: 0
-  m_Name: Timer
+  m_Name: Timer script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6914,7 +7236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112e1f993b2604048940ffbf94ca2af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 300
+  startTime: 180
   timerText: {fileID: 112974937}
 --- !u!1 &654943081
 GameObject:
@@ -8017,9 +8339,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieSpawn (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1848469903899170901, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8027,7 +8353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.63
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8501,6 +8827,7 @@ GameObject:
   - component: {fileID: 808160538}
   - component: {fileID: 808160537}
   - component: {fileID: 808160539}
+  - component: {fileID: 808160540}
   m_Layer: 0
   m_Name: GrassTile (30)
   m_TagString: Ground
@@ -8587,6 +8914,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &808160540
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808160535}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &811857063
 GameObject:
   m_ObjectHideFlags: 0
@@ -8628,7 +8971,7 @@ Transform:
   - {fileID: 557326517}
   - {fileID: 917674689}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811982496
 GameObject:
@@ -8642,6 +8985,7 @@ GameObject:
   - component: {fileID: 811982499}
   - component: {fileID: 811982498}
   - component: {fileID: 811982500}
+  - component: {fileID: 811982501}
   m_Layer: 0
   m_Name: GrassTile (19)
   m_TagString: Ground
@@ -8728,6 +9072,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &811982501
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811982496}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &812387899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9383,6 +9743,7 @@ GameObject:
   - component: {fileID: 843389413}
   - component: {fileID: 843389412}
   - component: {fileID: 843389414}
+  - component: {fileID: 843389415}
   m_Layer: 0
   m_Name: Tile_Corner
   m_TagString: Ground
@@ -9398,7 +9759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843389410}
   m_LocalRotation: {x: -0.00000011520229, y: -0.70710695, z: -0.7071066, w: 0.00000011520235}
-  m_LocalPosition: {x: 18.41, y: 0.47000122, z: 19.29}
+  m_LocalPosition: {x: 18.41, y: 0.25, z: 19.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9466,9 +9827,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300016, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &843389415
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843389410}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &844126921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9512,6 +9889,7 @@ GameObject:
   - component: {fileID: 845242358}
   - component: {fileID: 845242357}
   - component: {fileID: 845242359}
+  - component: {fileID: 845242360}
   m_Layer: 0
   m_Name: GrassTile (22)
   m_TagString: Ground
@@ -9598,6 +9976,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &845242360
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845242355}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &861259328
 GameObject:
   m_ObjectHideFlags: 0
@@ -9917,12 +10311,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867426940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14, y: 0.78, z: -26}
+  m_LocalPosition: {x: 14, y: -1, z: -26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &867426942
 MonoBehaviour:
@@ -9936,8 +10330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396c483568ca74fb28a57746ead72855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: {fileID: 867426940}
-  brainPrefab: {fileID: 6666725229502608532, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
+  brainPrefab: {fileID: 6666725229502608532, guid: 707948acb25e51c488d76bb536351ae0, type: 3}
 --- !u!1 &873451047
 GameObject:
   m_ObjectHideFlags: 0
@@ -10144,6 +10537,7 @@ GameObject:
   - component: {fileID: 882814511}
   - component: {fileID: 882814510}
   - component: {fileID: 882814512}
+  - component: {fileID: 882814513}
   m_Layer: 0
   m_Name: GrassTile (38)
   m_TagString: Ground
@@ -10230,6 +10624,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &882814513
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882814508}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &883220761
 GameObject:
   m_ObjectHideFlags: 0
@@ -10427,7 +10837,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903700413
 GameObject:
@@ -10441,6 +10851,7 @@ GameObject:
   - component: {fileID: 903700416}
   - component: {fileID: 903700415}
   - component: {fileID: 903700417}
+  - component: {fileID: 903700418}
   m_Layer: 0
   m_Name: GrassTile (25)
   m_TagString: Ground
@@ -10527,6 +10938,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &903700418
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903700413}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &904541039
 GameObject:
   m_ObjectHideFlags: 0
@@ -10539,6 +10966,7 @@ GameObject:
   - component: {fileID: 904541042}
   - component: {fileID: 904541041}
   - component: {fileID: 904541043}
+  - component: {fileID: 904541044}
   m_Layer: 0
   m_Name: GrassTile (33)
   m_TagString: Ground
@@ -10625,6 +11053,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &904541044
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904541039}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &907593317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11073,6 +11517,7 @@ GameObject:
   - component: {fileID: 924814832}
   - component: {fileID: 924814831}
   - component: {fileID: 924814833}
+  - component: {fileID: 924814834}
   m_Layer: 0
   m_Name: GrassTile (27)
   m_TagString: Ground
@@ -11088,7 +11533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924814829}
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 18.390001, y: 0.47, z: 35.100002}
+  m_LocalPosition: {x: 18.390001, y: 0.47, z: 35.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11159,6 +11604,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &924814834
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924814829}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &962241048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11879,6 +12340,7 @@ GameObject:
   - component: {fileID: 1022186375}
   - component: {fileID: 1022186374}
   - component: {fileID: 1022186376}
+  - component: {fileID: 1022186377}
   m_Layer: 0
   m_Name: GrassTile (43)
   m_TagString: Ground
@@ -11965,6 +12427,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1022186377
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022186372}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1031239137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12069,6 +12547,7 @@ GameObject:
   - component: {fileID: 1039883565}
   - component: {fileID: 1039883564}
   - component: {fileID: 1039883563}
+  - component: {fileID: 1039883566}
   m_Layer: 0
   m_Name: GrassTile (3)
   m_TagString: Ground
@@ -12155,6 +12634,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039883561}
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1039883566
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039883561}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1051560660
 GameObject:
   m_ObjectHideFlags: 0
@@ -12355,6 +12850,7 @@ GameObject:
   - component: {fileID: 1064235079}
   - component: {fileID: 1064235078}
   - component: {fileID: 1064235080}
+  - component: {fileID: 1064235081}
   m_Layer: 0
   m_Name: Tile_Road (2)
   m_TagString: Ground
@@ -12370,7 +12866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064235076}
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 10.469998, y: 0.47, z: 19.29}
+  m_LocalPosition: {x: 10.469998, y: 0.24999878, z: 19.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12438,9 +12934,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300028, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1064235081
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064235076}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1067040108
 GameObject:
   m_ObjectHideFlags: 0
@@ -12453,6 +12965,7 @@ GameObject:
   - component: {fileID: 1067040111}
   - component: {fileID: 1067040110}
   - component: {fileID: 1067040112}
+  - component: {fileID: 1067040113}
   m_Layer: 0
   m_Name: GrassTile (32)
   m_TagString: Ground
@@ -12539,6 +13052,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1067040113
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067040108}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1067978583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12625,6 +13154,7 @@ GameObject:
   - component: {fileID: 1069562290}
   - component: {fileID: 1069562289}
   - component: {fileID: 1069562291}
+  - component: {fileID: 1069562292}
   m_Layer: 0
   m_Name: GrassTile (39)
   m_TagString: Ground
@@ -12711,6 +13241,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1069562292
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069562287}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1071324157
 GameObject:
   m_ObjectHideFlags: 0
@@ -12736,12 +13282,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071324157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14, y: 0.78, z: 10}
+  m_LocalPosition: {x: 14, y: -1, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1071324159
 MonoBehaviour:
@@ -12755,8 +13301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396c483568ca74fb28a57746ead72855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: {fileID: 1071324157}
-  brainPrefab: {fileID: 6666725229502608532, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
+  brainPrefab: {fileID: 6666725229502608532, guid: d70fda6bf7ce768408cfe2549c5da890, type: 3}
 --- !u!1 &1075172061
 GameObject:
   m_ObjectHideFlags: 0
@@ -12769,6 +13314,7 @@ GameObject:
   - component: {fileID: 1075172064}
   - component: {fileID: 1075172063}
   - component: {fileID: 1075172065}
+  - component: {fileID: 1075172066}
   m_Layer: 0
   m_Name: GrassTile (29)
   m_TagString: Ground
@@ -12855,6 +13401,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1075172066
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075172061}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1101330755
 GameObject:
   m_ObjectHideFlags: 0
@@ -12965,6 +13527,7 @@ GameObject:
   - component: {fileID: 1127197319}
   - component: {fileID: 1127197318}
   - component: {fileID: 1127197320}
+  - component: {fileID: 1127197321}
   m_Layer: 0
   m_Name: GrassTile (2)
   m_TagString: Ground
@@ -13051,6 +13614,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1127197321
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127197316}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1139634379
 GameObject:
   m_ObjectHideFlags: 0
@@ -13063,6 +13642,7 @@ GameObject:
   - component: {fileID: 1139634382}
   - component: {fileID: 1139634381}
   - component: {fileID: 1139634383}
+  - component: {fileID: 1139634384}
   m_Layer: 0
   m_Name: GrassTile (37)
   m_TagString: Ground
@@ -13149,6 +13729,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1139634384
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139634379}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1140093377
 GameObject:
   m_ObjectHideFlags: 0
@@ -13161,6 +13757,7 @@ GameObject:
   - component: {fileID: 1140093380}
   - component: {fileID: 1140093379}
   - component: {fileID: 1140093381}
+  - component: {fileID: 1140093382}
   m_Layer: 0
   m_Name: Tile_Corner (2)
   m_TagString: Ground
@@ -13176,7 +13773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140093377}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5.470001, y: 0.47000122, z: -12.71}
+  m_LocalPosition: {x: -5.470001, y: 0.25, z: -12.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13244,9 +13841,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300016, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1140093382
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140093377}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1148029584
 GameObject:
   m_ObjectHideFlags: 0
@@ -13453,6 +14066,7 @@ GameObject:
   - component: {fileID: 1152752148}
   - component: {fileID: 1152752147}
   - component: {fileID: 1152752149}
+  - component: {fileID: 1152752150}
   m_Layer: 0
   m_Name: GrassTile (14)
   m_TagString: Ground
@@ -13539,6 +14153,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1152752150
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152752145}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1154504646
 GameObject:
   m_ObjectHideFlags: 0
@@ -13551,6 +14181,7 @@ GameObject:
   - component: {fileID: 1154504649}
   - component: {fileID: 1154504648}
   - component: {fileID: 1154504650}
+  - component: {fileID: 1154504651}
   m_Layer: 0
   m_Name: GrassTile (8)
   m_TagString: Ground
@@ -13637,6 +14268,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1154504651
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154504646}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1159589884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13824,6 +14471,7 @@ GameObject:
   - component: {fileID: 1181713765}
   - component: {fileID: 1181713764}
   - component: {fileID: 1181713766}
+  - component: {fileID: 1181713767}
   m_Layer: 0
   m_Name: Tile_Corner (3)
   m_TagString: Ground
@@ -13839,7 +14487,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181713762}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5000001, w: 0.49999994}
-  m_LocalPosition: {x: 18.410004, y: 0.47000122, z: -12.71}
+  m_LocalPosition: {x: 18.410004, y: 0.25, z: -12.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13907,9 +14555,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300016, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1181713767
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181713762}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1188560664
 GameObject:
   m_ObjectHideFlags: 0
@@ -13922,6 +14586,7 @@ GameObject:
   - component: {fileID: 1188560667}
   - component: {fileID: 1188560666}
   - component: {fileID: 1188560668}
+  - component: {fileID: 1188560669}
   m_Layer: 0
   m_Name: GrassTile (14)
   m_TagString: Ground
@@ -14008,6 +14673,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1188560669
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188560664}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1195564111
 GameObject:
   m_ObjectHideFlags: 0
@@ -14118,6 +14799,7 @@ GameObject:
   - component: {fileID: 1197337003}
   - component: {fileID: 1197337002}
   - component: {fileID: 1197337004}
+  - component: {fileID: 1197337005}
   m_Layer: 0
   m_Name: GrassTile (31)
   m_TagString: Ground
@@ -14204,6 +14886,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1197337005
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197337000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1221491493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14500,6 +15198,7 @@ GameObject:
   - component: {fileID: 1231764963}
   - component: {fileID: 1231764962}
   - component: {fileID: 1231764964}
+  - component: {fileID: 1231764965}
   m_Layer: 0
   m_Name: GrassTile (15)
   m_TagString: Ground
@@ -14586,6 +15285,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1231764965
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231764960}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1270181089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14698,6 +15413,7 @@ GameObject:
   - component: {fileID: 1270303131}
   - component: {fileID: 1270303130}
   - component: {fileID: 1270303132}
+  - component: {fileID: 1270303133}
   m_Layer: 0
   m_Name: GrassTile (21)
   m_TagString: Ground
@@ -14784,6 +15500,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1270303133
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270303128}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1280307105
 GameObject:
   m_ObjectHideFlags: 0
@@ -14894,6 +15626,7 @@ GameObject:
   - component: {fileID: 1288331701}
   - component: {fileID: 1288331700}
   - component: {fileID: 1288331702}
+  - component: {fileID: 1288331703}
   m_Layer: 0
   m_Name: GrassTile (11)
   m_TagString: Ground
@@ -14980,6 +15713,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1288331703
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288331698}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1299693426
 GameObject:
   m_ObjectHideFlags: 0
@@ -15086,6 +15835,7 @@ GameObject:
   - component: {fileID: 1302192836}
   - component: {fileID: 1302192835}
   - component: {fileID: 1302192837}
+  - component: {fileID: 1302192838}
   m_Layer: 0
   m_Name: GrassTile (24)
   m_TagString: Ground
@@ -15172,6 +15922,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1302192838
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302192833}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1308464021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15383,6 +16149,7 @@ GameObject:
   - component: {fileID: 1348962770}
   - component: {fileID: 1348962769}
   - component: {fileID: 1348962771}
+  - component: {fileID: 1348962772}
   m_Layer: 0
   m_Name: GrassTile (15)
   m_TagString: Ground
@@ -15469,6 +16236,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1348962772
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348962767}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1351039693
 GameObject:
   m_ObjectHideFlags: 0
@@ -15631,12 +16414,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409480486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14, y: 1.79, z: -26}
+  m_LocalPosition: {x: -14, y: -1, z: -26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1409480488
 MonoBehaviour:
@@ -15650,7 +16433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396c483568ca74fb28a57746ead72855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: {fileID: 0}
   brainPrefab: {fileID: 6666725229502608532, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
 --- !u!1001 &1409859898
 PrefabInstance:
@@ -16175,12 +16957,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431069519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14, y: 1.79, z: 10}
+  m_LocalPosition: {x: -14, y: -1, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1431069521
 MonoBehaviour:
@@ -16194,92 +16976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396c483568ca74fb28a57746ead72855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: {fileID: 1431069519}
-  brainPrefab: {fileID: 6666725229502608532, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
---- !u!1 &1431723058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1431723060}
-  - component: {fileID: 1431723059}
-  m_Layer: 3
-  m_Name: Brain minimap icon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1431723059
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431723058}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 61634cf15ca9f0a4d9cfa4e2dd82c315, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.46, y: 2.91}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1431723060
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431723058}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3, y: 1, z: 8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  brainPrefab: {fileID: 6666725229502608532, guid: 7c37f8f3ec0bd8c40bda897114d85966, type: 3}
 --- !u!1001 &1436921496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16592,6 +17289,7 @@ GameObject:
   - component: {fileID: 1458882379}
   - component: {fileID: 1458882378}
   - component: {fileID: 1458882380}
+  - component: {fileID: 1458882381}
   m_Layer: 0
   m_Name: GrassTile (34)
   m_TagString: Ground
@@ -16678,6 +17376,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1458882381
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458882376}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1461734606
 GameObject:
   m_ObjectHideFlags: 0
@@ -17215,6 +17929,7 @@ GameObject:
   - component: {fileID: 1527644870}
   - component: {fileID: 1527644869}
   - component: {fileID: 1527644871}
+  - component: {fileID: 1527644872}
   m_Layer: 0
   m_Name: GrassTile (17)
   m_TagString: Ground
@@ -17301,6 +18016,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1527644872
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527644867}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1530415800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17418,6 +18149,7 @@ GameObject:
   - component: {fileID: 1538325807}
   - component: {fileID: 1538325806}
   - component: {fileID: 1538325808}
+  - component: {fileID: 1538325809}
   m_Layer: 0
   m_Name: GrassTile (26)
   m_TagString: Ground
@@ -17504,6 +18236,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1538325809
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538325804}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1556497518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17715,6 +18463,7 @@ GameObject:
   - component: {fileID: 1579453452}
   - component: {fileID: 1579453451}
   - component: {fileID: 1579453453}
+  - component: {fileID: 1579453454}
   m_Layer: 0
   m_Name: GrassTile (9)
   m_TagString: Ground
@@ -17801,6 +18550,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1579453454
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579453449}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1579628477
 GameObject:
   m_ObjectHideFlags: 0
@@ -17813,6 +18578,7 @@ GameObject:
   - component: {fileID: 1579628480}
   - component: {fileID: 1579628479}
   - component: {fileID: 1579628481}
+  - component: {fileID: 1579628482}
   m_Layer: 0
   m_Name: GrassTile (35)
   m_TagString: Ground
@@ -17899,6 +18665,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1579628482
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579628477}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1590500291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18246,9 +19028,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieSpawn (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1848469903899170901, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18256,7 +19042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.63
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19013,6 +19799,7 @@ GameObject:
   - component: {fileID: 1674393384}
   - component: {fileID: 1674393383}
   - component: {fileID: 1674393385}
+  - component: {fileID: 1674393386}
   m_Layer: 0
   m_Name: GrassTile (32)
   m_TagString: Ground
@@ -19099,6 +19886,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1674393386
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674393381}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1705632801
 GameObject:
   m_ObjectHideFlags: 0
@@ -19292,7 +20095,7 @@ RectTransform:
   - {fileID: 112974936}
   - {fileID: 647148233}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -19469,6 +20272,7 @@ GameObject:
   - component: {fileID: 1721188597}
   - component: {fileID: 1721188596}
   - component: {fileID: 1721188598}
+  - component: {fileID: 1721188599}
   m_Layer: 0
   m_Name: GrassTile (16)
   m_TagString: Ground
@@ -19484,7 +20288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721188594}
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: -13.4400015, y: 0.47, z: -20.48}
+  m_LocalPosition: {x: -13.4400015, y: 0.47, z: -20.560001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19555,6 +20359,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1721188599
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721188594}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1727080575
 GameObject:
   m_ObjectHideFlags: 0
@@ -19567,6 +20387,7 @@ GameObject:
   - component: {fileID: 1727080578}
   - component: {fileID: 1727080577}
   - component: {fileID: 1727080579}
+  - component: {fileID: 1727080580}
   m_Layer: 0
   m_Name: GrassTile (16)
   m_TagString: Ground
@@ -19653,6 +20474,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1727080580
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727080575}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1730809100
 GameObject:
   m_ObjectHideFlags: 0
@@ -19782,6 +20619,7 @@ GameObject:
   - component: {fileID: 1746707809}
   - component: {fileID: 1746707808}
   - component: {fileID: 1746707810}
+  - component: {fileID: 1746707811}
   m_Layer: 0
   m_Name: Tile_Road (3)
   m_TagString: Ground
@@ -19797,7 +20635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746707806}
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 10.489998, y: 0.47000122, z: -12.71}
+  m_LocalPosition: {x: 10.489998, y: 0.25, z: -12.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19865,9 +20703,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300028, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1746707811
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746707806}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1766499683
 GameObject:
   m_ObjectHideFlags: 0
@@ -20179,6 +21033,7 @@ GameObject:
   - component: {fileID: 1794909489}
   - component: {fileID: 1794909488}
   - component: {fileID: 1794909490}
+  - component: {fileID: 1794909491}
   m_Layer: 0
   m_Name: GrassTile (42)
   m_TagString: Ground
@@ -20265,6 +21120,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1794909491
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794909486}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1808335237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20370,63 +21241,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5838242118759675180, guid: b7e7531301edc87478c8c85294dac0ba, type: 3}
---- !u!1001 &1814343314
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327319890224180782, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6666725229502608532, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-      propertyPath: m_Name
-      value: Brain
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
 --- !u!1 &1821356129
 GameObject:
   m_ObjectHideFlags: 0
@@ -20523,6 +21337,7 @@ GameObject:
   - component: {fileID: 1830986567}
   - component: {fileID: 1830986566}
   - component: {fileID: 1830986568}
+  - component: {fileID: 1830986569}
   m_Layer: 0
   m_Name: GrassTile (28)
   m_TagString: Ground
@@ -20609,6 +21424,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1830986569
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830986564}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1839115134
 GameObject:
   m_ObjectHideFlags: 0
@@ -20691,7 +21522,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1839588381
 GameObject:
@@ -20705,6 +21536,7 @@ GameObject:
   - component: {fileID: 1839588384}
   - component: {fileID: 1839588383}
   - component: {fileID: 1839588385}
+  - component: {fileID: 1839588386}
   m_Layer: 0
   m_Name: GrassTile (40)
   m_TagString: Ground
@@ -20791,6 +21623,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1839588386
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839588381}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1852560107
 GameObject:
   m_ObjectHideFlags: 0
@@ -20901,6 +21749,7 @@ GameObject:
   - component: {fileID: 1861920449}
   - component: {fileID: 1861920448}
   - component: {fileID: 1861920450}
+  - component: {fileID: 1861920451}
   m_Layer: 0
   m_Name: GrassTile (17)
   m_TagString: Ground
@@ -20916,7 +21765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861920446}
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 18.430002, y: 0.47, z: 27.16}
+  m_LocalPosition: {x: 18.430002, y: 0.47, z: 27.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20987,6 +21836,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1861920451
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861920446}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1875800909
 GameObject:
   m_ObjectHideFlags: 0
@@ -20999,6 +21864,7 @@ GameObject:
   - component: {fileID: 1875800912}
   - component: {fileID: 1875800911}
   - component: {fileID: 1875800913}
+  - component: {fileID: 1875800914}
   m_Layer: 0
   m_Name: Tile_Road
   m_TagString: Ground
@@ -21014,7 +21880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875800909}
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 2.5399995, y: 0.47, z: 19.29}
+  m_LocalPosition: {x: 2.5399995, y: 0.24999878, z: 19.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21082,9 +21948,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300028, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1875800914
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875800909}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1875825953
 GameObject:
   m_ObjectHideFlags: 0
@@ -21222,6 +22104,7 @@ GameObject:
   - component: {fileID: 1889004838}
   - component: {fileID: 1889004837}
   - component: {fileID: 1889004839}
+  - component: {fileID: 1889004840}
   m_Layer: 0
   m_Name: Bridge (1)
   m_TagString: Ground
@@ -21308,6 +22191,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300022, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1889004840
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889004835}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1897030602
 GameObject:
   m_ObjectHideFlags: 0
@@ -21710,6 +22609,7 @@ GameObject:
   - component: {fileID: 1912933452}
   - component: {fileID: 1912933451}
   - component: {fileID: 1912933453}
+  - component: {fileID: 1912933454}
   m_Layer: 0
   m_Name: GrassTile (21)
   m_TagString: Ground
@@ -21796,6 +22696,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &1912933454
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912933449}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1925048544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22482,6 +23398,7 @@ GameObject:
   - component: {fileID: 2000611008}
   - component: {fileID: 2000611007}
   - component: {fileID: 2000611009}
+  - component: {fileID: 2000611010}
   m_Layer: 0
   m_Name: GrassTile (12)
   m_TagString: Ground
@@ -22568,6 +23485,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &2000611010
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000611005}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &2008702064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22777,6 +23710,7 @@ GameObject:
   - component: {fileID: 2014904929}
   - component: {fileID: 2014904928}
   - component: {fileID: 2014904930}
+  - component: {fileID: 2014904931}
   m_Layer: 0
   m_Name: GrassTile (13)
   m_TagString: Ground
@@ -22792,7 +23726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014904926}
   m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: -5.460003, y: 0.47, z: -20.43}
+  m_LocalPosition: {x: -5.460003, y: 0.47, z: -20.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22863,6 +23797,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &2014904931
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014904926}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &2024516947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23364,22 +24314,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!54 &2066287622
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367735004}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!1001 &2067182127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23599,7 +24533,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2a906c0e82527414ea3c36740cbbfc8d, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a906c0e82527414ea3c36740cbbfc8d, type: 3}
       propertyPath: m_LocalScale.x
@@ -23680,6 +24614,7 @@ GameObject:
   - component: {fileID: 2078383275}
   - component: {fileID: 2078383274}
   - component: {fileID: 2078383276}
+  - component: {fileID: 2078383277}
   m_Layer: 0
   m_Name: GrassTile (41)
   m_TagString: Ground
@@ -23766,6 +24701,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &2078383277
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078383272}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &2081864408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23964,55 +24915,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 72e643619fa32984785527a0c110a313, type: 3}
---- !u!1 &2118582510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2118582512}
-  - component: {fileID: 2118582511}
-  m_Layer: 0
-  m_Name: brainSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2118582511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118582510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c3158055271d4647ae202d0b78d2b97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brainPrefab: {fileID: 6666725229502608532, guid: 24ce59f0ea3aa488385a146b26509497, type: 3}
-  area1: {fileID: 1409480486}
-  area2: {fileID: 867426940}
-  area3: {fileID: 1431069519}
-  area4: {fileID: 1071324157}
---- !u!4 &2118582512
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118582510}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.613987, y: 1.157651, z: -20.010757}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2125958013
 GameObject:
   m_ObjectHideFlags: 0
@@ -24025,6 +24927,7 @@ GameObject:
   - component: {fileID: 2125958016}
   - component: {fileID: 2125958015}
   - component: {fileID: 2125958017}
+  - component: {fileID: 2125958018}
   m_Layer: 0
   m_Name: GrassTile (31)
   m_TagString: Ground
@@ -24111,6 +25014,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300020, guid: 72e643619fa32984785527a0c110a313, type: 3}
+--- !u!54 &2125958018
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125958013}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2130721639
 GameObject:
   m_ObjectHideFlags: 0
@@ -24336,49 +25255,53 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 341683190, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341683190, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 341683190, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 341683190, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8286357
+      value: 0.87523293
       objectReference: {fileID: 0}
     - target: {fileID: 341683190, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.55978835
+      value: 0.4837017
       objectReference: {fileID: 0}
     - target: {fileID: 341683190, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000013736465
+      value: 0.00000002129748
       objectReference: {fileID: 0}
     - target: {fileID: 341683190, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000009279733
+      value: -0.000000011770155
       objectReference: {fileID: 0}
-    - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
-      propertyPath: brains1
-      value: 
-      objectReference: {fileID: 1409480488}
-    - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
-      propertyPath: brains2
-      value: 
-      objectReference: {fileID: 867426942}
-    - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
-      propertyPath: brains3
-      value: 
-      objectReference: {fileID: 1431069521}
-    - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
-      propertyPath: brains4
-      value: 
-      objectReference: {fileID: 1071324159}
+    - target: {fileID: 341683190, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 68.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639888359, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: m_FollowOffset.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639888360, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: m_BiasY
+      value: -0.12000029
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639888360, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: m_ScreenY
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639888360, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: m_DeadZoneHeight
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639888360, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: m_SoftZoneHeight
+      value: 0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639888360, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: m_TrackedObjectOffset.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: minimapIcon
       value: 
@@ -24388,16 +25311,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2076526788}
     - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
-      propertyPath: particleEffect
+      propertyPath: brainSpawner1
       value: 
-      objectReference: {fileID: 2609642944898786834, guid: b0b8c782c2657417aa805ac7db486608, type: 3}
-    - target: {fileID: 1118556788134179012, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
-      propertyPath: m_IsTrigger
+      objectReference: {fileID: 1409480488}
+    - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: brainSpawner2
+      value: 
+      objectReference: {fileID: 867426942}
+    - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: brainSpawner3
+      value: 
+      objectReference: {fileID: 1431069521}
+    - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: brainSpawner4
+      value: 
+      objectReference: {fileID: 1071324159}
+    - target: {fileID: 2066287620, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: layerMask.m_Bits
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1118556788134179014, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1118556788134179014, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24443,8 +25378,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6377375675505357963, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+    - target: {fileID: 8286670967125818184, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d16de82704648247b6e9fb2be195e0d, type: 3}
 --- !u!1001 &1848469903161760364
 PrefabInstance:
@@ -24457,9 +25395,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieSpawn
       objectReference: {fileID: 0}
+    - target: {fileID: 1848469903899170901, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24467,7 +25409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.63
       objectReference: {fileID: 0}
     - target: {fileID: 1848469903899170903, guid: 856b643c6293fdd4892fcde2a2d643fa, type: 3}
       propertyPath: m_LocalPosition.z

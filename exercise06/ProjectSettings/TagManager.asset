@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Ground
   - Enemy
-  - Collectable
   - Destination
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -15,8 +15,8 @@ TagManager:
   - Minimap
   - Water
   - UI
-  - 
-  - 
+  - Zombie
+  - Brain
   - 
   - 
   - 

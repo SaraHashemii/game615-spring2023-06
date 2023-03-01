@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour
     public float enemyCount;
     public bool enemyScoreAdd;
     private GameObject[] _enemies;
-    public Spawner spawner;
+    public ZombieSpawner spawner;
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class ScoreManager : MonoBehaviour
             }
         }
 
-        if (playerCount >= 15 && playerScoreAdd)
+        if (playerCount >= 30 && playerScoreAdd)
         {
             spawner.LargeSpawn();
             _enemies = GameObject.FindGameObjectsWithTag("Enemy");

@@ -16,7 +16,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         currentTime = startTime;
-        timerText.text = "Time Left:" + currentTime.ToString("f1");
+        timerText.text = "Time Left: " + currentTime.ToString("f1");
         timerStarted = true;
 
     }
@@ -38,7 +38,7 @@ public class UIController : MonoBehaviour
             //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             //}
-            timerText.text = "Time Left:" + currentTime.ToString("f1");
+            timerText.text = "Time Left: " + currentTime.ToString("f1");
         }
     }
 }
