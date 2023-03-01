@@ -8,6 +8,7 @@ public class ZombieController : MonoBehaviour
     public GameObject brain1Prefab, brain2Prefab, brain3Prefab, brain4Prefab;
     private GameObject _destination;
     private GameObject[] _destinations;
+    private bool _isSeeking;
     ScoreManager SM;
     public GameObject canvas;
     public LayerMask brainLM; 
@@ -46,28 +47,38 @@ public class ZombieController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        /*if (inRange) 
+        if (inRange) 
         { 
-        triggerArea.SetActive(false);
-        }*/
+            //triggerArea.SetActive(false);
+        }
 
         Collider[] brainHit = Physics.OverlapSphere(transform.position, 6, brainLM);
-        if(brainHit != null)
-        { 
+        if(brainHit != null && inRange)
+        {
+            _isSeeking = true; 
             foreach (Collider brain in brainHit)
             {
                 _agent.destination = brain.transform.position;
-                //var distanceToBrain = Vector3.Distance(transform.position, brain.transform.position);
+                var distanceToBrain = Vector3.Distance(transform.position, brain.transform.position);
+                if (distanceToBrain < .25f)
+                {
+                    inRange = false; 
+                }
             }
         }
         else
         {
+            _isSeeking = false; 
+        }
+
+        if (!_isSeeking)
+        {
             var distanceToDestination = Vector3.Distance(transform.position, _destination.transform.position);
-            if (distanceToDestination < .75f)
+            if (distanceToDestination < .5f)
             {
                 SetNextDestination();
             }
-        }    
+        }
 
         if (_asleep)
         {

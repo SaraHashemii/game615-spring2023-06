@@ -13,15 +13,22 @@ public class WakeUpCount : MonoBehaviour
         timeCount = 21; 
     }
 
-
     void Update()
     {
-        timeCount -= Time.deltaTime;
-        int seconds = (int)(timeCount % 60);
-        timer.text = timeCount.ToString(); 
-        if(timeCount == 0)
+        if(timeCount != 0)
+        {
+            DisplayTime(timeCount);
+        }
+        else
         {
             timeCount = 0; 
         }
+    }
+
+    void DisplayTime(float timeToDisplay)
+    {
+        timeToDisplay -= 1;
+        float seconds = Mathf.FloorToInt(timeCount % 60);
+        timer.text = string.Format("{00}", seconds);
     }
 }
