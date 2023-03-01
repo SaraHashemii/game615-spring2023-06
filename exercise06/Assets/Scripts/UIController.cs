@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-//using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
     [SerializeField] float startTime;
-
+    ScoreManager sm;
     float currentTime;
     bool timerStarted = false;
     [SerializeField] TMP_Text timerText;
@@ -18,6 +18,7 @@ public class UIController : MonoBehaviour
         currentTime = startTime;
         timerText.text = "Time Left: " + currentTime.ToString("f1");
         timerStarted = true;
+        sm = GameObject.Find("Canvas").GetComponent<ScoreManager>();
 
     }
 
@@ -29,15 +30,21 @@ public class UIController : MonoBehaviour
             currentTime -= Time.deltaTime;
 
 
-            //if (currentTime <= 0 )
-            //{
-            //    timerStarted = false;
-            //    currentTime = 0;
+            if (currentTime <= 0)
+            {
+                timerStarted = false;
+                currentTime = 0;
 
-               
-            //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                if (sm.playerCount > sm.enemyCount)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                else
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                }
 
-            //}
+            }
             timerText.text = "Time Left: " + currentTime.ToString("f1");
         }
     }
