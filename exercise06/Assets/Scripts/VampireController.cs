@@ -10,6 +10,7 @@ public class VampireController : MonoBehaviour
     public GameObject minimapIcon;
     public GameObject brainPrefab;
     public LayerMask layerMask;
+    public AudioSource AS; 
     public bool collected; 
     ScoreManager SM;
     public ParticleSystem particleEffect;
@@ -44,6 +45,7 @@ public class VampireController : MonoBehaviour
         {
             collected = true; 
             SM.AddPointToPlayer();
+            AS.Play();
             Destroy(other.gameObject);
             particleEffect.Play();
             brainSpawner1.StartCoroutine("SpawnOneBrain");
@@ -53,6 +55,7 @@ public class VampireController : MonoBehaviour
         {
             collected = true;
             SM.AddPointToPlayer();
+            AS.Play();
             Destroy(other.gameObject);
             particleEffect.Play();
             brainSpawner2.StartCoroutine("SpawnOneBrain");
@@ -62,6 +65,7 @@ public class VampireController : MonoBehaviour
         {
             collected = true;
             SM.AddPointToPlayer();
+            AS.Play();
             Destroy(other.gameObject);
             particleEffect.Play();
             brainSpawner3.StartCoroutine("SpawnOneBrain");
@@ -71,6 +75,7 @@ public class VampireController : MonoBehaviour
         {
             collected = true;
             SM.AddPointToPlayer();
+            AS.Play();
             Destroy(other.gameObject);
             particleEffect.Play();
             brainSpawner4.StartCoroutine("SpawnOneBrain");
