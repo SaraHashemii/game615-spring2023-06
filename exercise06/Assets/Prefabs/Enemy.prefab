@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 21
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -154,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1791013155
 RectTransform:
   m_ObjectHideFlags: 0
@@ -244,13 +244,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791013151}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b07d10f30a9d8c43a79e8209a011645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1282991927}
-  timeCount: 26
 --- !u!1 &1806887588
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +479,7 @@ MonoBehaviour:
     m_Bits: 128
   zombie: {fileID: 588582392833892147}
   grave: {fileID: 9046827727121150655}
-  smellSense: 5
+  smellSense: 6
   minimapIcon: {fileID: 2772127475218166369, guid: 9aebc4cd844cfa4438bcf8a2251b3f77, type: 3}
   onCollectParticle: {fileID: 7213707366582391914}
   onAsleepParticle: {fileID: 62282082184269448}

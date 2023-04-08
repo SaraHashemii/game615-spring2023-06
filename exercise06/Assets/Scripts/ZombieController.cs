@@ -14,7 +14,7 @@ public class ZombieController : MonoBehaviour
     public LayerMask brainLM; 
     public GameObject zombie;
     public GameObject grave;
-    public float smellSense = 5;
+    public float smellSense;
     public GameObject minimapIcon;
     public ParticleSystem onCollectParticle;
     public ParticleSystem onAsleepParticle;
@@ -27,8 +27,8 @@ public class ZombieController : MonoBehaviour
     {
         int index = Random.Range(0, _destinations.Length);
         _destination = _destinations[index];
-        float randomX = _destination.transform.position.x + Random.Range(0, 2);
-        float randomZ = _destination.transform.position.z + Random.Range(0, 2);
+        float randomX = _destination.transform.position.x + Random.Range(-1, 1);
+        float randomZ = _destination.transform.position.z + Random.Range(-1, 1);
         Vector3 closeDest = new Vector3(randomX, _destination.transform.position.y, randomZ); 
         _agent.destination = closeDest;           
     }
@@ -46,7 +46,6 @@ public class ZombieController : MonoBehaviour
 
     private void FixedUpdate()
     {      
-        //triggerArea.SetActive(false);
         Collider[] brainHit = Physics.OverlapSphere(transform.position, smellSense, brainLM);
         if (brainHit != null)
         { 
@@ -54,11 +53,6 @@ public class ZombieController : MonoBehaviour
             foreach (Collider brain in brainHit)
             {
                 _agent.destination = brain.transform.position;
-                /*var distanceToBrain = Vector3.Distance(transform.position, brain.transform.position);
-                if (distanceToBrain < .25f)
-                {
-                    inRange = false;
-                }*/
             }
         }
         else
@@ -68,8 +62,10 @@ public class ZombieController : MonoBehaviour
 
         if (!_isSeeking)
         {
+            int index = Random.Range(0, _destinations.Length);
+            _destination = _destinations[index];
             var distanceToDestination = Vector3.Distance(transform.position, _destination.transform.position);
-            if (distanceToDestination < .5f)
+            if (distanceToDestination <= .5f)
             {
                 SetNextDestination();
             }
@@ -89,16 +85,13 @@ public class ZombieController : MonoBehaviour
     {
         if(_isSeeking)
         {
-            //Handles.color = new Color(1f, 0f, 0f, 0.1f);
             Gizmos.color = new Color(1f, 0f, 0f, 0.1f);
         }
         else
         {
-            //Handles.color = new Color(0f, 1f, 0f, 0.1f);
             Gizmos.color = new Color(0f, 1f, 0f, 0.1f);
         }
-        // Draw a disc displaying the smell sense range for the zombie
-        //Handles.DrawSolidDisc(transform.position,Vector3.up, smellSense);        
+        // Draw a disc displaying the smell sense range for the zombie   
         Gizmos.DrawSphere(transform.position, smellSense);
     }
 
@@ -157,15 +150,19 @@ public class ZombieController : MonoBehaviour
         onAsleepParticle.gameObject.SetActive(true);
         onAsleepParticle.Play();
         canvas.SetActive(true);
+        canvas.GetComponent<WakeUpCount>().enabled = true;
+        canvas.GetComponent<WakeUpCount>().timeCount = 27;
         yield return new WaitForSeconds(20);
         onAsleepParticle.Stop();
         onAsleepParticle.gameObject.SetActive(false);
         canvas.SetActive(false);
+        canvas.GetComponent<WakeUpCount>().enabled = false; 
         grave.SetActive(false);
         zombie.SetActive(true);
         MIM.changeIcon = false;
         _agent.speed = 2;
-        _asleep = false;
+        _isSeeking = false;
         SetNextDestination();
+        _asleep = false;
     }
 }

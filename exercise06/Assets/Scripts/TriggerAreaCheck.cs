@@ -18,7 +18,7 @@ public class TriggerAreaCheck : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Collectable"))
         {
-            ZC.SetNextDestination(); 
+            //ZC.SetNextDestination(); 
         }
     }
 }
