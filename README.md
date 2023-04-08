@@ -1,4 +1,3 @@
-
 **Exercise 06:** _"Feast competition"_
  
 **Group team:** Sara and HongCheng
